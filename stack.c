@@ -6,6 +6,9 @@
 Stack * create_stack(int initial_size)
 {
 	Stack * s = (Stack *)malloc(sizeof(Stack));
+	if(s==NULL){
+		return NULL;
+	}
 	s->contents = (int *)malloc(initial_size*sizeof(Item));
 	s->top=0;
 	s->size=initial_size;
